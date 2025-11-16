@@ -1,436 +1,470 @@
-# 🎯 Portal Killer Watch
+# Portal Killer Watch v1.1.3
 
-> A cybersecurity wearable that detects and counter-attacks evil WiFi portals with 420 savage insults
+> **Discrete Portal Defense with Savage Insults**  
+> A watch that roasts data thieves and attacks evil portals
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.8-blue.svg)](https://github.com/yourusername/PortalKillerWatch/releases)
-[![Hardware](https://img.shields.io/badge/hardware-M5StickC%20Plus2-red.svg)](https://docs.m5stack.com/en/core/M5StickC%20PLUS2)
-[![Platform](https://img.shields.io/badge/platform-ESP32-green.svg)](https://www.espressif.com/en/products/socs/esp32)
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Status-Stable-brightgreen" alt="Status">
-  <img src="https://img.shields.io/badge/Insults-420-orange" alt="Insults">
-  <img src="https://img.shields.io/badge/WiFi-Security-blue" alt="WiFi Security">
-</div>
+![Version](https://img.shields.io/badge/version-1.1.3-blue.svg)
+![Platform](https://img.shields.io/badge/platform-M5StickC%20Plus2-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ---
 
-## 🔥 What It Does
+## 🎯 What Is This?
 
-Portal Killer Watch is a **defensive security tool** that runs on M5StickC Plus2. It automatically:
+**Portal Killer Watch** is a discrete defense tool disguised as a simple watch. When activated, it automatically detects and attacks evil WiFi portals by flooding their credential capture systems with garbage data and savage insults.
 
-- 🔍 **Scans** for open WiFi networks (potential evil portals)
-- ⚡ **Detects** suspicious captive portals
-- 💥 **Counter-attacks** by flooding them with fake credentials
-- 🎯 **Roasts** data thieves with 420 unique, savage insults
-- ⌚ **Functions** as a normal watch with customizable display
-
-**Perfect for:** Coffee shops, airports, hotels, conferences - anywhere evil portals lurk!
-
----
-
-## ✨ Features
-
-### Core Functionality
-- ✅ **420 Unique Insults** - Creative, tech-focused roasts for data thieves
-- ✅ **Automatic Detection** - Scans for open WiFi networks every 30 seconds
-- ✅ **Smart Counter-Attack** - Sends 25 different random fake credentials per portal
-- ✅ **Status Tracking** - Visual feedback with color-coded messages:
-  - 🟡 **PORTAL ATTACKED!** - Successfully connected and spamming
-  - 🔵 **PORTAL DODGED!** - Couldn't connect to portal
-  - 🟢 **PORTAL NUKED!** - Portal disappeared after attack (success!)
-
-### Display & Interface
-- ⏰ **Always-On Clock** - Time displayed at top, portal status below
-- 🎨 **8 Clock Colors** - Red, Orange, Green, Cyan, Blue, Magenta, Yellow, White
-- 💡 **11 Brightness Levels** - Adjustable for any lighting condition
-- 🎛️ **Settings Menu** - Easy configuration with button navigation
-
-### Power Management
-- 💤 **Screen Timeout** - Auto-sleep after 10s, 30s, 60s, 2min, or 5min
-- 🔔 **Shake to Wake** - Three sensitivity levels (Light, Medium, Heavy)
-- 🔋 **Battery Optimized** - Efficient scanning and display management
+**Key Features:**
+- 🕐 **Looks like a watch** - Discrete and unassuming
+- 🛡️ **Active defense** - Automatically scans and attacks evil portals
+- 💬 **460+ savage insults** - Roasts data thieves with style
+- 💾 **Persistent settings** - All preferences survive reboot
+- 🎯 **Smart detection** - Works with any portal gateway IP
+- 🔥 **Dual attack mode** - Targets generic portals AND NEMO/Bruce specifically
 
 ---
 
-## 📦 Quick Start
+## 🚀 Quick Start
 
-### What You Need
-- M5StickC Plus2 device
-- USB-C cable (data transfer capable)
-- M5Burner OR esptool.py
+### Flash to Device
 
-### Installation (2 Minutes)
-
-#### Option 1: M5Burner (Easiest)
-1. Download [M5Burner](https://docs.m5stack.com/en/download)
-2. Download `PortalHaterv1.0.8-MERGED.bin` from [Releases](../../releases)
-3. Connect M5StickC Plus2 via USB
-4. Open M5Burner, select your port
-5. Click "Burn" and select the MERGED.bin file
-6. Wait 30 seconds - Done!
-
-#### Option 2: Command Line
 ```bash
-pip install esptool
-esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 921600 \
-  write_flash 0x0 PortalHaterv1.0.8-MERGED.bin
+esptool --port /dev/ttyACM0 write-flash 0x0 PortalHaterv1.1.3-MERGED.bin
 ```
 
-### First Use
-1. Device boots showing "PORTAL KILLER WATCH"
-2. **Hold B button** (1 sec) to open settings menu
-3. Select "Set Time" and adjust with A/B buttons
-4. **Press A button** to activate Portal Killer mode
-5. Watch automatically scans and attacks evil portals!
+### Controls
+
+**Main Clock Screen:**
+- **Button A** - Toggle Portal Killer ON/OFF
+- **Button B** (short) - Cycle brightness (11 levels)
+- **Button B** (hold 1s) - Enter settings menu
+
+**Settings Menu:**
+- **Button A** - Select menu item
+- **Button B** - Navigate UP ⬆️
+- **PWR Button** - Navigate DOWN ⬇️
+
+**Settings Submenus:**
+- **Button A** - Save & exit
+- **Button B** - Change value (time, color, etc.)
+- **PWR Button** - Toggle ON/OFF (timeout/shake features)
 
 ---
 
-## 🎮 Controls
+## 🎮 Features
 
-### Buttons
-| Button | Action | Function |
-|--------|--------|----------|
-| **A** (tap) | Toggle | Portal Killer ON/OFF |
-| **A** (in menu) | Select | Choose/confirm option |
-| **B** (tap) | Brightness | Cycle through 11 levels |
-| **B** (hold 1s) | Menu | Open settings menu |
-| **B** (in menu) | Navigate | Move through options |
-| **Power** (hold 6s) | Power Off | Shut down device |
+### Core Functionality
 
-### Settings Menu
-1. **Set Time** - Adjust hours and minutes (saves to RTC)
-2. **Screen Timeout** - Enable/disable with 5 duration options
-3. **Shake to Wake** - Toggle and adjust sensitivity (Light/Medium/Heavy)
-4. **Clock Color** - Choose from 8 colors with live preview
-5. **Exit Menu** - Return to clock
+#### Portal Killer Mode
+- Scans for open WiFi networks every 30 seconds
+- Automatically detects evil portals
+- Connects and floods them with fake credentials
+- Uses different savage insults for each request
+- Tracks kill count on screen
+
+#### Smart Gateway Detection (v1.1.3)
+- **Auto-detects portal IP** - works with any gateway
+- Supports `192.168.4.1` (WiFi Pineapple)
+- Supports `172.0.0.1` (NEMO, Bruce)
+- Supports custom gateway IPs
+
+#### Dual Attack Strategy (v1.1.3)
+**Generic Portal Attack:**
+- Endpoints: `/login`, `/auth`, `/signin`, `/portal`, `/admin`
+- Format: `username=hacker&password=<insult>&email=trash@dump.com`
+
+**NEMO/Bruce Portal Attack:**
+- Endpoint: `/post` (hit multiple times)
+- Format: `email=trash@garbage.com&password=<insult>`
+
+#### Attack Pattern
+- 3 attack rounds per portal
+- 8 endpoints per round (5 generic + 3 NEMO)
+- **24 total POST requests** with garbage data
+- Different random insult for each request
+- Portal logs flooded with trash! 🗑️
+
+### Clock & Display
+
+- **8 clock colors** - Red, Orange, Green, Cyan, Blue, Magenta, Yellow, White
+- **11 brightness levels** - 25 to 255
+- **24-hour format** - Configurable (default: enabled)
+- **Time setting** - Adjustable hours and minutes
+- **Portal status** - Shows active scanning, kill count
+
+### Power Management
+
+#### Screen Timeout
+- **5 duration options** - 10s, 30s, 60s, 120s, 300s
+- **Toggle ON/OFF** - PWR button
+- Saves last used settings
+- Portal Killer continues running when screen is off
+
+#### Shake to Wake
+- **3 sensitivity levels** - Light, Medium, Heavy
+- **Toggle ON/OFF** - PWR button
+- Wake screen by shaking the watch
+- Configurable acceleration thresholds
+
+### Settings Persistence (v1.1.0)
+
+**All settings survive reboot:**
+- ✅ Clock color
+- ✅ Brightness level
+- ✅ Screen timeout (state + duration)
+- ✅ Shake to wake (state + sensitivity)
+- ✅ 24-hour format preference
+
+Uses ESP32 NVS (Non-Volatile Storage) - settings stored in flash memory.
 
 ---
 
-## 🛠️ Building From Source
+## 💬 The Insults
+
+**460+ savage roasts** targeting data thieves and portal hackers:
+
+```
+"Your portal is garbage!"
+"Stealing data? Pathetic."
+"You're a script kiddie!"
+"Your encryption is weak!"
+"Zero-day? More like zero-brain!"
+"You hack like you're afraid of success."
+"Your brain runs on trial versions with watermark restrictions."
+"You're the tutorial boss that everyone beats by accident."
+"If stupidity was encrypted, you'd finally crack something."
+```
+
+And **450+ more**... Each insult is randomly selected for maximum variety!
+
+---
+
+## 🎯 Targets
+
+### Tested & Verified
+
+| Portal Type | Status | Gateway IP | Attack Format |
+|-------------|--------|------------|---------------|
+| WiFi Pineapple | ✅ | 192.168.4.1 | Generic |
+| NEMO Portal | ✅ | 172.0.0.1 | NEMO-specific |
+| Bruce Portal | ✅ | 172.0.0.1 | NEMO-specific |
+| Generic Evil Portals | ✅ | Various | Generic |
+| Custom Captive Portals | ✅ | Auto-detected | Dual attack |
+
+### What NEMO Sees
+
+**Before Portal Killer:**
+```
+Email: user@example.com
+Password: MyPassword123
+```
+
+**After Portal Killer v1.1.3:**
+```
+Email: trash8234@Yourskil.com
+Password: You hack like you're afraid of success.
+---
+Email: trash2941@garbage.com
+Password: Your brain runs on trial versions.
+---
+Email: trash7123@dump.com
+Password: You're a glitch in human form.
+---
+[+456 more insult-filled entries...]
+```
+
+**Their logs get completely flooded!** 🎯
+
+---
+
+## 📦 Technical Details
+
+### Hardware
+
+- **Device:** M5StickC Plus2
+- **MCU:** ESP32-PICO-V3-02
+- **WiFi:** 802.11 b/g/n
+- **Display:** 135×240 LCD
+- **Buttons:** A, B, PWR
+- **IMU:** For shake detection
+
+### Software
+
+- **Framework:** Arduino (ESP32)
+- **Libraries:** M5StickCPlus2, WiFi, HTTPClient, Preferences
+- **Flash Size:** ~1.1 MB (merged binary)
+- **RAM Usage:** 16.9% (55 KB)
+- **Flash Usage:** 81.3% (1.06 MB)
+
+### Code Structure
+
+```
+src/main.cpp
+├── Clock display & time management
+├── Portal detection & scanning
+├── Attack logic (dual format)
+├── Menu system (flicker-free)
+├── Settings persistence (NVS)
+├── Screen timeout & wake
+└── 460+ insult database
+```
+
+### Performance
+
+- **Menu rendering:** Flicker-free, smooth 60+ FPS
+- **Scan interval:** 30 seconds (configurable)
+- **Attack duration:** ~5 seconds per portal
+- **Battery life:** Several hours of active scanning
+
+---
+
+## 🛠️ Building from Source
 
 ### Requirements
-- [PlatformIO](https://platformio.org/) (VSCode extension or CLI)
-- M5StickC Plus2 device
 
-### Build Steps
+- PlatformIO Core
+- ESP32 toolchain
+- M5StickCPlus2 library v1.0.2
+
+### Build Commands
+
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/yourusername/PortalKillerWatch.git
 cd PortalKillerWatch
+
+# Install dependencies
+pio lib install
 
 # Build
 pio run
 
+# Create merged binary (includes bootloader)
+esptool --chip esp32 merge-bin \
+  -o PortalHaterv1.1.3-MERGED.bin \
+  --flash-mode dio \
+  --flash-freq 40m \
+  --flash-size 4MB \
+  0x1000 .pio/build/m5stick-c-plus2/bootloader.bin \
+  0x8000 .pio/build/m5stick-c-plus2/partitions.bin \
+  0xe000 ~/.platformio/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin \
+  0x10000 .pio/build/m5stick-c-plus2/firmware.bin
+
 # Flash to device
-pio run --target upload
-
-# Monitor serial output (optional)
-pio device monitor
+esptool --port /dev/ttyACM0 write-flash 0x0 PortalHaterv1.1.3-MERGED.bin
 ```
 
-### Dependencies (Auto-installed)
-- M5StickCPlus2 library v1.0.2
-- HTTPClient v2.0.0
-- WiFi v2.0.0
+### platformio.ini
 
----
+```ini
+[env:m5stick-c-plus2]
+platform = espressif32
+board = m5stick-c
+framework = arduino
 
-## 📊 Technical Specifications
+monitor_speed = 115200
+upload_speed = 1500000
 
-| Component | Details |
-|-----------|---------|
-| **Device** | M5StickC Plus2 |
-| **MCU** | ESP32-PICO-V3-02 (Dual-core 240MHz) |
-| **Display** | 1.14" TFT LCD (135x240 pixels) |
-| **WiFi** | 2.4GHz 802.11 b/g/n |
-| **Sensors** | 6-axis IMU (accelerometer + gyro) |
-| **Memory** | 320KB RAM, 4MB Flash |
-| **Power** | Built-in 200mAh battery + USB-C |
-| **RAM Usage** | 16.9% (55,480 bytes) |
-| **Flash Usage** | 81.0% (1,061,865 bytes) |
-
----
-
-## 🎯 How It Works
-
-### Detection
-1. Device scans WiFi every 30 seconds when active
-2. Identifies **open networks** (no password = potential evil portal)
-3. Open networks are prime candidates for phishing attacks
-
-### Counter-Attack
-1. Connects to detected portal
-2. Sends 25 POST requests to common endpoints:
-   - `/login`, `/auth`, `/signin`, `/portal`, `/admin`
-3. Each request contains random fake credentials
-4. Username: `hacker####` (random number)
-5. Password & Email: Random insult from 420-insult database
-6. Floods portal with junk data to waste attacker's time
-
-### Smart Detection
-- Tracks attacked portals
-- Re-scans to verify if portal disappeared
-- Shows **"PORTAL NUKED!"** only when portal actually goes offline
-
----
-
-## 📝 Example Insults
-
-All 420 insults are:
-- ✅ Safe for all audiences
-- ✅ No hate speech or slurs
-- ✅ Tech/security themed
-- ✅ Creative and entertaining
-
-Sample roasts:
-```
-"Your encryption is weaker than your password"
-"You're a script kiddie with expired motivation"
-"Your backdoor is closed permanently"
-"Even password123 would reject you"
-"You're the human equivalent of a corrupted file"
-"Your best exploit is wasting my time"
+lib_deps = 
+    m5stack/M5StickCPlus2@^1.0.2
+    
+build_flags = 
+    -DCORE_DEBUG_LEVEL=0
 ```
 
-Want to add your own? Edit `src/main.cpp` line 20!
+---
+
+## 📋 Version History
+
+### v1.1.3 (November 16, 2025) - NEMO Portal Support
+- ✅ Smart gateway IP detection (works with any portal)
+- ✅ NEMO portal attack support (172.0.0.1)
+- ✅ Bruce portal compatibility
+- ✅ Dual attack format (generic + NEMO-specific)
+- ✅ 24 POST requests per portal (increased spam)
+
+### v1.1.2 (November 16, 2025) - Navigation & Polish
+- ✅ Fixed navigation (B=Up, PWR=Down)
+- ✅ Eliminated screen flicker in all menus
+- ✅ Smooth, professional UI experience
+- ✅ Optimized redraw logic (~90% reduction)
+
+### v1.1.1 (November 16, 2025) - Menu Controls
+- ✅ PWR button navigates in main menu
+- ✅ PWR button toggles ON/OFF in settings
+- ✅ Fixed stuck-ON bug for timeout/shake features
+
+### v1.1.0 (November 16, 2025) - Persistent Settings
+- ✅ All settings survive reboot
+- ✅ ESP32 NVS storage implementation
+- ✅ Auto-save on menu changes
+- ✅ Auto-load on startup
+
+### v1.0.9 (Base) - Core Features
+- ✅ Portal Killer active scanning
+- ✅ 460+ savage insults
+- ✅ Discrete watch interface
+- ✅ Clock display with customization
+- ✅ Screen timeout & shake to wake
 
 ---
 
-## ⚖️ Legal & Ethics
+## 🎨 Screenshots
 
-### ⚠️ IMPORTANT DISCLAIMER
+### Clock Display
+```
+┌─────────────────┐
+│  PORTAL KILLER  │
+│     WATCH       │
+│                 │
+│   12:34:56      │  ← Clock (8 colors)
+│                 │
+│ PORTAL KILLER:  │
+│ ACTIVE          │
+│ Kills: 5        │
+│ Scanning...     │
+│                 │
+│ A:Off  B:Bright │
+└─────────────────┘
+```
 
-This software is for **EDUCATIONAL and DEFENSIVE purposes only.**
+### Attack in Progress
+```
+┌─────────────────┐
+│   12:34:56      │
+│                 │
+│ ATTACKING:      │
+│ NEMO Free WiFi  │
+│                 │
+│ Your portal is  │
+│ garbage! You're │
+│ a script kiddie!│
+│                 │
+│ Gateway: 172.0.0.1 │
+└─────────────────┘
+```
 
-### ✅ Acceptable Use
-- Personal WiFi security awareness
-- Educational demonstrations in controlled environments
-- Security research with proper authorization
-- Defensive measures against evil portals
-- Raising awareness about WiFi security risks
-
-### ❌ Prohibited Use
-- Attacking networks without explicit permission
-- Disrupting public or private WiFi services
-- Unauthorized access to computer systems
-- Any illegal activities under applicable laws
-
-### 📜 Legal Notice
-**Unauthorized access to computer networks is illegal** in most jurisdictions:
-- 🇺🇸 USA: Computer Fraud and Abuse Act (CFAA)
-- 🇪🇺 EU: Network and Information Security Directive
-- 🇬🇧 UK: Computer Misuse Act
-- And similar laws worldwide
-
-**By using this software, you agree to:**
-1. Use it legally and ethically
-2. Take full responsibility for your actions
-3. Comply with all applicable laws
-4. Not hold the authors liable for any consequences
-
-**When in doubt, don't use it without permission!**
-
----
-
-## 🐛 Troubleshooting
-
-<details>
-<summary><b>Device won't connect to computer</b></summary>
-
-- Try a different USB-C cable (must support data transfer)
-- Try a different USB port on your computer
-- Hold the reset button while connecting
-- Check if drivers are installed (CP210x or CH340)
-</details>
-
-<details>
-<summary><b>Flashing failed or timeout</b></summary>
-
-- Lower baud rate: Use `115200` instead of `921600`
-- Erase flash first: `esptool.py --chip esp32 --port /dev/ttyUSB0 erase_flash`
-- Make sure you're using the MERGED.bin file
-- Try holding reset button during flash
-</details>
-
-<details>
-<summary><b>Portal Killer not detecting networks</b></summary>
-
-- Press A button to ensure it's activated (should say "ACTIVE")
-- Check that you're in range of open WiFi networks
-- Wait 30 seconds for first scan
-- Make sure WiFi isn't disabled in your area
-</details>
-
-<details>
-<summary><b>Screen won't wake up</b></summary>
-
-- Press any button (A or B)
-- Check if Screen Timeout is enabled in settings
-- If Shake to Wake enabled, try shaking device harder
-- Adjust shake sensitivity in settings (try "Light")
-</details>
-
-<details>
-<summary><b>Clock shows wrong time</b></summary>
-
-- Hold B button for 1 second to open menu
-- Select "Set Time" with A button
-- Use B to adjust hours, press A to move to minutes
-- Use B to adjust minutes, press A to save
-</details>
+### Settings Menu
+```
+┌─────────────────┐
+│   SETTINGS      │
+│                 │
+│ ▶ Set Time      │  ← Selected (green)
+│   Screen Timeout│
+│   Shake to Wake │
+│   Clock Color   │
+│   Exit Menu     │
+│                 │
+│ Timeout:ON Shake:OFF │
+│ A:Sel B:Up PWR:Down  │
+└─────────────────┘
+```
 
 ---
 
-## 📚 Documentation
+## 🔒 Legal & Ethics
 
-| Document | Description |
-|----------|-------------|
-| [Quick Start Guide](docs/QUICK_START.md) | 5-minute setup walkthrough |
-| [Flashing Instructions](docs/FLASHING.md) | Detailed firmware installation |
-| [Changelog](docs/CHANGELOG.md) | Complete version history |
-| [License](LICENSE) | MIT License with ethical guidelines |
+### Intended Use
 
----
+This tool is designed for:
+- **Security research** - Testing your own networks
+- **Educational purposes** - Understanding captive portals
+- **Authorized penetration testing** - With proper permissions
+- **Personal protection** - Defending against rogue portals
 
-## 🔄 Version History
+### Important Notes
 
-### v1.0.8 (Current - November 15, 2024)
-- ✨ Clock color customization (8 colors)
-- 🎨 Live color preview in menu
-- 🔵 "PORTAL DODGED!" changed to blue
+⚠️ **Only use on networks you own or have explicit permission to test.**
 
-### v1.0.7
-- 📱 Shake sensitivity settings (Light/Medium/Heavy)
-- ⚡ Adjustable wake threshold
+- Attacking networks without authorization is **illegal**
+- This tool is for **defensive** purposes
+- The author is not responsible for misuse
+- Always comply with local laws and regulations
 
-### v1.0.6
-- 🎛️ Settings menu system (Hold B button)
-- ⏰ Set time function
-- 💤 Screen timeout with adjustable timing
-- 🔔 Shake to wake feature
-- ⚡ "DESTROYED" changed to "NUKED!"
+### Ethical Guidelines
 
-### v1.0.5
-- 🕐 Clock always visible (unified display)
-- 📊 Portal status shown below clock
+✅ **DO:**
+- Test your own networks
+- Use in authorized pen-testing
+- Learn about portal defense
+- Protect yourself from rogue portals
 
-### v1.0.4
-- 🎲 25 different random insults per attack
-- ✅ "PORTAL NUKED!" only when portal actually disappears
-- 🔀 True random selection with hardware RNG
-
-### v1.0.3
-- 🔥 Expanded to 420 total insults
-
-[See full changelog](docs/CHANGELOG.md)
+❌ **DON'T:**
+- Attack public networks
+- Use without permission
+- Deploy in production environments without authorization
+- Violate computer fraud laws
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
+Contributions are welcome! Please:
 
-- 🐛 Report bugs via [Issues](../../issues)
-- 💡 Suggest features or improvements
-- 🎨 Add more creative insults
-- 📖 Improve documentation
-- 🔧 Submit pull requests
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-**Adding insults:**
-1. Edit `src/main.cpp` line 20 (dataThiefInsults array)
-2. Keep them tech/security themed
-3. No hate speech or offensive content
-4. Submit a PR!
+### Ideas for Contributions
 
----
-
-## 🙏 Credits & Thanks
-
-**Built with:**
-- [M5Stack](https://m5stack.com/) - Excellent ESP32 hardware
-- [ESP32 Arduino](https://github.com/espressif/arduino-esp32) - Framework
-- [PlatformIO](https://platformio.org/) - Build system
-
-**Inspired by:**
-- WiFi security research
-- Defensive security practices
-- Evil portal awareness initiatives
-
-**Special thanks to the maker community!**
+- Additional portal attack patterns
+- More insult categories
+- Battery life optimizations
+- Additional device support (M5Cardputer, etc.)
+- UI improvements
+- Documentation enhancements
 
 ---
 
-## 📜 License
+## 📝 License
 
-This project is licensed under the **MIT License** with ethical use requirements.
-
-See [LICENSE](LICENSE) file for full details.
-
-**TL;DR:**
-- ✅ Free to use, modify, and distribute
-- ✅ Commercial use allowed
-- ⚠️ Must use ethically and legally
-- ⚠️ Authors not liable for misuse
-- ⚠️ Use at your own risk
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📧 Support
+## 🙏 Acknowledgments
 
-- 📖 Documentation: Check the [docs](docs/) folder
-- 🐛 Issues: Open an [issue](../../issues)
-- 💬 Discussions: Start a [discussion](../../discussions)
-- 📧 Email: [Your email or remove this line]
+- **M5Stack** - For the excellent M5StickC Plus2 hardware
+- **Evil Portal community** - For understanding portal mechanics
+- **Security researchers** - For identifying portal vulnerabilities
+- **Open source contributors** - For libraries and tools
 
----
+### Inspiration
 
-## 🌟 Star This Project!
-
-If you find Portal Killer Watch useful:
-- ⭐ Star this repository
-- 🍴 Fork it for your own modifications
-- 📢 Share it with the security community
-- 🐦 Tweet about it with #PortalKillerWatch
+- NEMO portal project (n0xa/m5stick-nemo)
+- WiFi Pineapple defense concepts
+- Captive portal security research
 
 ---
 
-## 🎯 Quick Links
+## 📞 Support
 
-- **Latest Release:** [v1.0.8](../../releases/latest)
-- **Firmware Download:** [PortalHaterv1.0.8-MERGED.bin](../../releases/latest)
-- **Documentation:** [docs/](docs/)
-- **Source Code:** [src/main.cpp](src/main.cpp)
-- **Issues:** [Report a bug](../../issues)
+- **Issues:** [GitHub Issues](https://github.com/yourusername/PortalKillerWatch/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/yourusername/PortalKillerWatch/discussions)
+- **Documentation:** See changelogs for detailed version notes
 
 ---
 
-<div align="center">
+## 🎊 Ready to Deploy!
 
-**Made with ❤️ for the cybersecurity community**
+```bash
+# Quick flash command
+esptool --port /dev/ttyACM0 write-flash 0x0 PortalHaterv1.1.3-MERGED.bin
 
-**Use responsibly. Stay legal. Be ethical.** ⚖️
+# Your watch is now a portal killer! 🎯
+```
 
-**Happy portal hunting!** 🎯🔥
+**Features:**
+- ✨ Persistent settings
+- 🎮 Intuitive navigation
+- 🚀 Zero flicker
+- 💾 Full control
+- 🛡️ NEMO support
+- 🧠 Smart gateway detection
 
-</div>
-
----
-
-## 📊 Project Stats
-
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/yourusername/PortalKillerWatch)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/yourusername/PortalKillerWatch)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/PortalKillerWatch)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/PortalKillerWatch)
-
-**Development:** Single evening build (November 15, 2024)  
-**Total Versions:** 8 releases  
-**Features:** 15+ major features  
-**Code:** ~1100 lines  
-**Insults:** 420 unique messages  
-**Status:** Feature Complete ✓
+**Now go roast some data thieves!** 😈💥
 
 ---
 
-*Portal Killer Watch - Defending against evil portals, one insult at a time.* 🛡️
+Made with 💀 by portal defense enthusiasts
