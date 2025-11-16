@@ -16,7 +16,7 @@
 **Key Features:**
 - 🕐 **Looks like a watch** - Discrete and unassuming
 - 🛡️ **Active defense** - Automatically scans and attacks evil portals
-- 💬 **460+ savage insults** - Roasts data thieves with style
+- 💬 **420+ savage insults** - Roasts data thieves with style
 - 💾 **Persistent settings** - All preferences survive reboot
 - 🎯 **Smart detection** - Works with any portal gateway IP
 - 🔥 **Dual attack mode** - Targets generic portals AND NEMO/Bruce specifically
@@ -120,7 +120,7 @@ Uses ESP32 NVS (Non-Volatile Storage) - settings stored in flash memory.
 
 ## 💬 The Insults
 
-**460+ savage roasts** targeting data thieves and portal hackers:
+**420+ savage roasts** targeting data thieves and portal hackers:
 
 ```
 "Your portal is garbage!"
@@ -134,7 +134,7 @@ Uses ESP32 NVS (Non-Volatile Storage) - settings stored in flash memory.
 "If stupidity was encrypted, you'd finally crack something."
 ```
 
-And **450+ more**... Each insult is randomly selected for maximum variety!
+And ** more**... Each insult is randomly selected for maximum variety!
 
 ---
 
